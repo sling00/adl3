@@ -164,7 +164,7 @@ def show_status(adapter_list=None):
                                                             fan_speed[ADL_DL_FANCTRL_SPEED_TYPE_RPM],
                                                             "user-defined" if user_defined else "default")
             elif bool(fan_speed[ADL_DL_FANCTRL_SPEED_TYPE_PERCENT]):
-                print "    fan speed %d%% (%s)" % (fan_speed[ADL_DL_FANCTRL_SPEED_TYPE_PERCENT],
+                print "    fan speed %d%% (0 RPM) or unable to get fan speed (%s)" % (fan_speed[ADL_DL_FANCTRL_SPEED_TYPE_PERCENT],
                                                    "user-defined" if user_defined else "default")                
             elif bool(fan_speed[ADL_DL_FANCTRL_SPEED_TYPE_RPM]) is True:
                 print "    fan speed %d RPM (%s)" % (fan_speed[ADL_DL_FANCTRL_SPEED_TYPE_RPM],
